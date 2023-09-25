@@ -7,12 +7,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 41px;
-}
-.icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 h1 {
   margin: 0;
