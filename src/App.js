@@ -27,7 +27,23 @@ function App() {
           path='/'
           element={
             <div style={{ flex: 1 }}>
-              <h1>CONTENT</h1>
+              <h1>홈화면</h1>
+            </div>
+          }
+        />
+        <Route
+          path='/inquiries'
+          element={
+            <div style={{ flex: 1 }}>
+              <h1>문의하기</h1>
+            </div>
+          }
+        />
+        <Route
+          path='/my-page'
+          element={
+            <div style={{ flex: 1 }}>
+              <h1>MY 페이지</h1>
             </div>
           }
         />
