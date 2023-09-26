@@ -6,11 +6,6 @@ import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    // const setVh = () => {
-    //   document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
-    // };
-    // window.addEventListener('resize', setVh);
-    // setVh();
     const setVh = () => {
       const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -20,6 +15,7 @@ function App() {
   }, []);
 
   return (
+    // TODO: https로 수정 후 PWA 적용
     <div className='App'>
       <Header />
       <Routes>
