@@ -1,12 +1,12 @@
 .footer {
   margin-top: auto;
-  min-width: calc(100vw-82px);
+  min-width: calc(100vw - 82px);
   background-color: #dae591;
   height: 61px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0 41px;
+  padding: 0 41px;
   .icon {
     display: flex;
     flex-direction: column;
