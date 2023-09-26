@@ -1,3 +1,13 @@
+:root {
+  --vh: 1vh; /* 초기값을 설정합니다. */
+}
+
+html,
+body {
+  height: 100%;
+  /* height: calc(var(--vh, 1vh) * 100); */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
