@@ -3,7 +3,7 @@ import { useNavigate, useNavigation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
 
-import styles from './Header.module.scss';
+import styles from './Header.module.css';
 
 function Header() {
   const navigate = useNavigate();
