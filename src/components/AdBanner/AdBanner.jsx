@@ -1,9 +1,12 @@
 import styles from './AdBanner.module.css';
+import KakaoAdFit from './KakaoAdFit';
 
 function AdBanner() {
   return (
     <>
-      <div className={styles.adBanner}>광고배너</div>
+      <div className={styles.adBanner}>
+        <KakaoAdFit />
+      </div>
     </>
   );
 }
