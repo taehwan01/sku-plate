@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import { useEffect } from 'react';
+import Home from './pages/Home';
 
 function App() {
   useEffect(() => {
@@ -18,31 +19,10 @@ function App() {
     // TODO: https로 수정 후 PWA 적용
     <div className='App'>
       <Header />
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <div style={{ flex: 1 }}>
-              <h1>홈화면</h1>
-            </div>
-          }
-        />
-        <Route
-          path='/inquiries'
-          element={
-            <div style={{ flex: 1 }}>
-              <h1>문의하기</h1>
-            </div>
-          }
-        />
-        <Route
-          path='/my-page'
-          element={
-            <div style={{ flex: 1 }}>
-              <h1>MY 페이지</h1>
-            </div>
-          }
-        />
+      <Routes style={{ flex: 1 }}>
+        <Route path='/' element={<Home />} />
+        <Route path='/inquiries' element={<h1>문의하기</h1>} />
+        <Route path='/my-page' element={<h1>MY 페이지</h1>} />
       </Routes>
       <Footer />
     </div>
