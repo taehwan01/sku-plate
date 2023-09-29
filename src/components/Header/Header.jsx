@@ -23,6 +23,7 @@ function Header() {
 
   const [prompt, setPrompt] = useState(null);
   const [isSafari, setIsSafari] = useState(false);
+  const [showA2HS, setShowA2HS] = useState(true);
 
   const [modalText, setModalText] = useState('');
   const [showModal, setShowModal] = useState(false);
@@ -41,6 +42,11 @@ function Header() {
       setIsSafari(true);
     }
 
+    if (!prompt) {
+      console.log('prompt');
+      setShowA2HS(true);
+    }
+
     return () => {
       window.removeEventListener('beforeinstallprompt', handler);
     };
@@ -54,6 +60,7 @@ function Header() {
         if (choiceResult.outcome === 'accepted') {
           setModalText('홈 화면에 추가되었습니다.');
           setShowModal(true);
+          setShowA2HS(false);
           // console.log('The app was added to the home screen');
         } else {
           setModalText('홈 화면 추가가 취소되었습니다.');
@@ -76,6 +83,7 @@ function Header() {
         setShowModal(false);
       }, 5000);
       setModalTimer(timer);
+      // setShowA2HS(true);
       // console.error('Prompt object is null');
     }
   };
@@ -98,7 +106,7 @@ function Header() {
         onClick={handleAddToHomeScreenClick}
         // disabled={isSafari} // Safari 환경에서 버튼 비활성화
       >
-        <FontAwesomeIcon icon={faMobileScreenButton} />
+        {showA2HS && <FontAwesomeIcon icon={faMobileScreenButton} />}
       </button>
       {showModal && <MessageModal onClickCloseModal={closeModal} message={modalText} />}
     </div>
