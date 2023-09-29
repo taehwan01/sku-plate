@@ -23,7 +23,6 @@ function Header() {
 
   const [prompt, setPrompt] = useState(null);
   const [isSafari, setIsSafari] = useState(false);
-  const [showA2HS, setShowA2HS] = useState(true);
 
   const [modalText, setModalText] = useState('');
   const [showModal, setShowModal] = useState(false);
@@ -42,15 +41,10 @@ function Header() {
       setIsSafari(true);
     }
 
-    if (!prompt) {
-      console.log('prompt');
-      setShowA2HS(true);
-    }
-
     return () => {
       window.removeEventListener('beforeinstallprompt', handler);
     };
-  }, [prompt]);
+  }, []);
 
   const handleAddToHomeScreenClick = () => {
     if (!isSafari && prompt) {
@@ -60,7 +54,6 @@ function Header() {
         if (choiceResult.outcome === 'accepted') {
           setModalText('홈 화면에 추가되었습니다.');
           setShowModal(true);
-          setShowA2HS(false);
           // console.log('The app was added to the home screen');
         } else {
           setModalText('홈 화면 추가가 취소되었습니다.');
@@ -101,7 +94,7 @@ function Header() {
       <button className={styles.backButton} onClick={() => navigate(-1)}>
         <FontAwesomeIcon icon={faAngleLeft} />
       </button>
-      {showA2HS && (
+      {prompt && (
         <button
           className={styles.backButton}
           onClick={handleAddToHomeScreenClick}
