@@ -12,9 +12,9 @@
 }
 
 .modalBox {
-  width: 92vw;
-  height: 37vh;
-  padding: 15px 0;
+  /* width: 92vw;
+  height: 37vh; */
+  padding: 25px 30px;
   background-color: white;
   box-shadow: 0 0 15px 5px rgb(58, 58, 58);
   border-radius: 10px;
@@ -26,21 +26,6 @@
 .lightBulbIcon {
   font-size: 30px;
   color: #dae591;
-}
-.shareIcon,
-.plusIcon {
-  font-size: 17px;
-  color: #dae591;
-}
-
-.modalMessage {
-  text-align: center;
-  font-size: 17px;
-  line-height: 35px;
-}
-.appName {
-  color: #dae591;
-  font-weight: bold;
 }
 .modalCloseButton {
   width: 80px;
@@ -61,4 +46,10 @@
   background-color: #dae591;
   color: white;
   font-weight: bold;
+}
+
+.modalMessage {
+  text-align: center;
+  font-size: 17px;
+  line-height: 35px;
 }

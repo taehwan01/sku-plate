@@ -2,16 +2,31 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faSquarePlus } from '@fortawesome/free-regular-svg-icons';
 
 import styles from './Header.module.css';
-import SafariModal from '../SafariModal/SafariModal';
+import MessageModal from '../MessageModal/MessageModal';
+
+const safariModal = (
+  <span className={styles.modalModal}>
+    홈화면에 <span className={styles.appName}>서경 PLATE</span>를 추가하시려면
+    <br />
+    기기 하단 탭 버튼 <FontAwesomeIcon className={styles.shareIcon} icon={faArrowUpFromBracket} /> 클릭 후
+    <br />
+    화면 추가 <FontAwesomeIcon className={styles.plusIcon} icon={faSquarePlus} /> 를 눌러주세요.
+  </span>
+);
 
 function Header() {
   const navigate = useNavigate();
 
   const [prompt, setPrompt] = useState(null);
   const [isSafari, setIsSafari] = useState(false);
-  const [safariModal, setSafariModal] = useState(false);
+
+  const [modalText, setModalText] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [modalTimer, setModalTimer] = useState(null);
 
   useEffect(() => {
     const handler = (event) => {
@@ -37,21 +52,40 @@ function Header() {
 
       prompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('The app was added to the home screen');
+          setModalText('홈 화면에 추가되었습니다.');
+          setShowModal(true);
+          // console.log('The app was added to the home screen');
         } else {
-          console.log('The app was not added to the home screen');
+          setModalText('홈 화면 추가가 취소되었습니다.');
+          setShowModal(true);
+          // console.log('The app was not added to the home screen');
         }
+        const timer = setTimeout(() => {
+          setShowModal(false);
+        }, 5000);
+        setModalTimer(timer);
       });
     } else if (isSafari) {
-      console.log('Safari에서는 홈 화면 추가 기능을 지원하지 않습니다.');
-      setSafariModal(true);
+      setModalText(safariModal);
+      setShowModal(true);
+      // console.log('Safari에서는 홈 화면 추가 기능을 지원하지 않습니다.');
     } else {
-      console.error('Prompt object is null');
+      setModalText('홈 화면에 이미 추가되어 있습니다.');
+      setShowModal(true);
+      const timer = setTimeout(() => {
+        setShowModal(false);
+      }, 5000);
+      setModalTimer(timer);
+      // console.error('Prompt object is null');
     }
   };
 
-  const handleCloseSafariModal = () => {
-    setSafariModal(false);
+  const closeModal = () => {
+    setShowModal(false);
+    // 모달이 닫힐 때 타이머도 해제
+    if (modalTimer) {
+      clearTimeout(modalTimer);
+    }
   };
 
   return (
@@ -66,7 +100,7 @@ function Header() {
       >
         <FontAwesomeIcon icon={faMobileScreenButton} />
       </button>
-      {safariModal ? <SafariModal onClickCloseModal={handleCloseSafariModal} /> : ''}
+      {showModal && <MessageModal onClickCloseModal={closeModal} message={modalText} />}
     </div>
   );
 }

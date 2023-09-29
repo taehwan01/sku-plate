@@ -20,3 +20,14 @@
   margin: 0 15px;
   font-size: 33px;
 }
+
+.shareIcon,
+.plusIcon {
+  font-size: 17px;
+  color: #dae591;
+}
+
+.appName {
+  color: #dae591;
+  font-weight: bold;
+}
