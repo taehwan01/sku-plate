@@ -22,7 +22,7 @@ function Header() {
   const navigate = useNavigate();
 
   const [prompt, setPrompt] = useState(null);
-  const [isSafari, setIsSafari] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
 
   const [modalText, setModalText] = useState('');
   const [showModal, setShowModal] = useState(false);
@@ -36,18 +36,17 @@ function Header() {
 
     window.addEventListener('beforeinstallprompt', handler);
 
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    if (userAgent.includes('safari') && !userAgent.includes('chrome')) {
-      setIsSafari(true);
+    const userAgent = window.navigator.userAgent;
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      setIsIOS(true);
     }
-
     return () => {
       window.removeEventListener('beforeinstallprompt', handler);
     };
   }, [prompt]);
 
   const handleAddToHomeScreenClick = () => {
-    if (!isSafari && prompt) {
+    if (!isIOS && prompt) {
       prompt.prompt();
 
       prompt.userChoice.then((choiceResult) => {
@@ -65,7 +64,7 @@ function Header() {
         }, 5000);
         setModalTimer(timer);
       });
-    } else if (isSafari) {
+    } else if (isIOS) {
       setModalText(safariModal);
       setShowModal(true);
       // console.log('Safari에서는 홈 화면 추가 기능을 지원하지 않습니다.');
@@ -96,26 +95,19 @@ function Header() {
       </button>
 
       {/* iOS 환경 */}
-      {isSafari && !navigator.standalone && (
-        <button
-          className={styles.backButton}
-          onClick={handleAddToHomeScreenClick}
-          // disabled={isSafari} // Safari 환경에서 버튼 비활성화
-        >
+      {isIOS && !navigator.standalone && (
+        <button className={styles.backButton} onClick={handleAddToHomeScreenClick}>
           <FontAwesomeIcon icon={faMobileScreenButton} />
         </button>
       )}
 
       {/* android 환경 */}
-      {prompt && !isSafari && (
-        <button
-          className={styles.backButton}
-          onClick={handleAddToHomeScreenClick}
-          // disabled={isSafari} // Safari 환경에서 버튼 비활성화
-        >
+      {prompt && !isIOS && (
+        <button className={styles.backButton} onClick={handleAddToHomeScreenClick}>
           <FontAwesomeIcon icon={faMobileScreenButton} />
         </button>
       )}
+      {isIOS ? 'iOS' : 'Android'}
       {showModal && <MessageModal onClickCloseModal={closeModal} message={modalText} />}
     </div>
   );
