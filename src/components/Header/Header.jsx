@@ -53,11 +53,9 @@ function Header() {
         if (choiceResult.outcome === 'accepted') {
           setModalText('홈 화면에 추가되었습니다.');
           setShowModal(true);
-          // console.log('The app was added to the home screen');
         } else {
           setModalText('홈 화면 추가가 취소되었습니다.');
           setShowModal(true);
-          // console.log('The app was not added to the home screen');
         }
         const timer = setTimeout(() => {
           setShowModal(false);
@@ -67,7 +65,6 @@ function Header() {
     } else if (isIOS) {
       setModalText(safariModal);
       setShowModal(true);
-      // console.log('Safari에서는 홈 화면 추가 기능을 지원하지 않습니다.');
     } else {
       setModalText('홈 화면에 이미 추가되어 있습니다.');
       setShowModal(true);
@@ -75,8 +72,6 @@ function Header() {
         setShowModal(false);
       }, 5000);
       setModalTimer(timer);
-      // setShowA2HS(true);
-      // console.error('Prompt object is null');
     }
   };
 
@@ -107,7 +102,7 @@ function Header() {
           <FontAwesomeIcon icon={faMobileScreenButton} />
         </button>
       )}
-      {isIOS ? 'iOS' : 'Android'}
+
       {showModal && <MessageModal onClickCloseModal={closeModal} message={modalText} />}
     </div>
   );
