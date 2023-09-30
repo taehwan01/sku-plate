@@ -44,7 +44,7 @@ function Header() {
     return () => {
       window.removeEventListener('beforeinstallprompt', handler);
     };
-  }, []);
+  }, [prompt]);
 
   const handleAddToHomeScreenClick = () => {
     if (!isSafari && prompt) {
@@ -94,7 +94,20 @@ function Header() {
       <button className={styles.backButton} onClick={() => navigate(-1)}>
         <FontAwesomeIcon icon={faAngleLeft} />
       </button>
-      {prompt && (
+
+      {/* iOS 환경 */}
+      {isSafari && !navigator.standalone && (
+        <button
+          className={styles.backButton}
+          onClick={handleAddToHomeScreenClick}
+          // disabled={isSafari} // Safari 환경에서 버튼 비활성화
+        >
+          <FontAwesomeIcon icon={faMobileScreenButton} />
+        </button>
+      )}
+
+      {/* android 환경 */}
+      {prompt && !isSafari && (
         <button
           className={styles.backButton}
           onClick={handleAddToHomeScreenClick}
