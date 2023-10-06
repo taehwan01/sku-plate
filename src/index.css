@@ -22,7 +22,7 @@ code {
 
 .App {
   height: calc(var(--vh, 1vh) * 100);
-  background-color: #f8fcf4;
+  background-color: #f1f8f2;
   display: flex;
   flex-direction: column;
 }

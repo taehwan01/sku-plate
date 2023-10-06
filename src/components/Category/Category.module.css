@@ -1,0 +1,27 @@
+.category {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.categoryContents {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.categoryMenu {
+  margin-top: 4px;
+  font-size: 10px;
+}
+.categoryIcon {
+  width: 48px;
+  height: 48px;
+}

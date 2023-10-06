@@ -1,9 +1,9 @@
 .adBanner {
   border: 10px solid #dae591;
-  width: 310px;
-  height: 90px;
+  width: 320px;
+  height: 100px;
   background-color: #dae591;
-  margin: 20px auto 0;
+  margin: 16px auto;
   display: flex;
   justify-content: center;
   align-items: center;
