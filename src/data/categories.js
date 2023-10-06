@@ -1,6 +1,7 @@
 export const categories = [
   {
     id: 1,
+    name_eng: 'all',
     name: '전체',
     icon: 'LION_EMBLEM_ICON',
     sizeOfWidth: '48px',
@@ -8,6 +9,7 @@ export const categories = [
   },
   {
     id: 2,
+    name_eng: 'korean',
     name: '한식',
     icon: 'KOREAN_ICON',
     sizeOfWidth: '50px',
@@ -15,6 +17,7 @@ export const categories = [
   },
   {
     id: 3,
+    name_eng: 'chinese',
     name: '중식',
     icon: 'CHINESE_ICON',
     sizeOfWidth: '63px',
@@ -22,6 +25,7 @@ export const categories = [
   },
   {
     id: 4,
+    name_eng: 'japanese',
     name: '일식',
     icon: 'JAPANESE_ICON',
     sizeOfWidth: '59px',
@@ -29,6 +33,7 @@ export const categories = [
   },
   {
     id: 5,
+    name_eng: 'western',
     name: '양식',
     icon: 'WESTERN_ICON',
     sizeOfWidth: '59px',
@@ -36,6 +41,7 @@ export const categories = [
   },
   {
     id: 6,
+    name_eng: 'etc',
     name: '기타',
     icon: 'ETC_ICON',
     sizeOfWidth: '45.88px',
@@ -43,6 +49,7 @@ export const categories = [
   },
   {
     id: 7,
+    name_eng: 'dessert',
     name: '디저트',
     icon: 'DESSERT_ICON',
     sizeOfWidth: '52px',
@@ -50,6 +57,7 @@ export const categories = [
   },
   {
     id: 8,
+    name_eng: 'bar',
     name: '술집',
     icon: 'BAR_ICON',
     sizeOfWidth: '47px',

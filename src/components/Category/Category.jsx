@@ -1,10 +1,20 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './Category.module.css';
 
-function Category({ name, icon, sizeOfWidth, sizeOfHeight }) {
+function Category({ category }) {
+  const navigate = useNavigate();
+
+  const { name, icon, sizeOfWidth, sizeOfHeight, name_eng } = category;
+
   const iconFilePath = require(`../../assets/images/categories/${icon}.png`);
+
+  const onClickCategory = () => {
+    navigate(`/categories/${name_eng}`);
+  };
+
   return (
     <div className={styles.category}>
-      <div className={styles.categoryContents}>
+      <div className={styles.categoryContents} onClick={onClickCategory}>
         <div className={styles.categoryIcon}>
           <img
             style={{

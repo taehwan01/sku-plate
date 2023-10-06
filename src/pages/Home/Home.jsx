@@ -15,10 +15,12 @@ function Home() {
         {categories.map((category) => (
           <Category
             key={category.id}
-            name={category.name}
-            icon={category.icon}
-            sizeOfWidth={category.sizeOfWidth}
-            sizeOfHeight={category.sizeOfHeight}
+            category={category}
+            // name={category.name}
+            // icon={category.icon}
+            // sizeOfWidth={category.sizeOfWidth}
+            // sizeOfHeight={category.sizeOfHeight}
+            // category={category.category}
           />
         ))}
       </section>
