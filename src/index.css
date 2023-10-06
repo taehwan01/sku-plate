@@ -14,6 +14,7 @@ body {
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+  background-color: #f1f8f2;
   /* font-family: 'Jua', sans-serif; */
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -27,7 +28,6 @@ code {
 
 .App {
   height: calc(var(--vh, 1vh) * 100);
-  background-color: #f1f8f2;
   display: flex;
   flex-direction: column;
 }
