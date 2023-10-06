@@ -20,7 +20,7 @@ function TodaysRestaurant({ thumbnail, name, tags, ratings }) {
         </div>
         <div className={styles.ratings}>
           <img className={styles.ratingsIcon} src={RATINGS_ICON} alt='' />
-          <span className={`${styles.ratingsScore} jua`}>{ratings}</span>
+          <span className={`${styles.ratingsScore} jua`}>{ratings.toFixed(1)}</span>
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
-import { categories } from '../data/categories';
-import { todaysRestaurant } from '../data/todaysRestaurant';
+import { categories } from '../../data/categories';
+import { todaysRestaurant } from '../../data/todaysRestaurant';
 
 import styles from './Home.module.css';
-import AdBanner from '../components/AdBanner/AdBanner';
-import Category from '../components/Category/Category';
-import TodaysRestaurant from '../components/TodaysRestaurant/TodaysRestaurant';
+import AdBanner from '../../components/AdBanner/AdBanner';
+import Category from '../../components/Category/Category';
+import TodaysRestaurant from '../../components/TodaysRestaurant/TodaysRestaurant';
 
 function Home() {
   return (

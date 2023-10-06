@@ -10,7 +10,7 @@ export const todaysRestaurant = [
     id: 2,
     name: '우정식당',
     tags: ['한식', '제육볶음'],
-    ratings: 5.0,
+    ratings: 4.0,
     thumbnail: 'USER_ICON',
   },
   {
@@ -22,9 +22,9 @@ export const todaysRestaurant = [
   },
   {
     id: 4,
-    name: '한림관',
-    tags: ['양식', '등심돈가스'],
-    ratings: 3.9,
+    name: '경성마라탕',
+    tags: ['중식', '마라탕'],
+    ratings: 4.7,
     thumbnail: 'USER_ICON',
   },
 ];
