@@ -22,7 +22,7 @@ function Header() {
   const navigate = useNavigate();
 
   const [prompt, setPrompt] = useState(null);
-  const [isSafari, setIsSafari] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
 
   const [modalText, setModalText] = useState('');
   const [showModal, setShowModal] = useState(false);
@@ -36,39 +36,35 @@ function Header() {
 
     window.addEventListener('beforeinstallprompt', handler);
 
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    if (userAgent.includes('safari') && !userAgent.includes('chrome')) {
-      setIsSafari(true);
+    const userAgent = window.navigator.userAgent;
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      setIsIOS(true);
     }
-
     return () => {
       window.removeEventListener('beforeinstallprompt', handler);
     };
-  }, []);
+  }, [prompt]);
 
   const handleAddToHomeScreenClick = () => {
-    if (!isSafari && prompt) {
+    if (!isIOS && prompt) {
       prompt.prompt();
 
       prompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           setModalText('홈 화면에 추가되었습니다.');
           setShowModal(true);
-          // console.log('The app was added to the home screen');
         } else {
           setModalText('홈 화면 추가가 취소되었습니다.');
           setShowModal(true);
-          // console.log('The app was not added to the home screen');
         }
         const timer = setTimeout(() => {
           setShowModal(false);
         }, 5000);
         setModalTimer(timer);
       });
-    } else if (isSafari) {
+    } else if (isIOS) {
       setModalText(safariModal);
       setShowModal(true);
-      // console.log('Safari에서는 홈 화면 추가 기능을 지원하지 않습니다.');
     } else {
       setModalText('홈 화면에 이미 추가되어 있습니다.');
       setShowModal(true);
@@ -76,8 +72,6 @@ function Header() {
         setShowModal(false);
       }, 5000);
       setModalTimer(timer);
-      // setShowA2HS(true);
-      // console.error('Prompt object is null');
     }
   };
 
@@ -94,15 +88,21 @@ function Header() {
       <button className={styles.backButton} onClick={() => navigate(-1)}>
         <FontAwesomeIcon icon={faAngleLeft} />
       </button>
-      {prompt && (
-        <button
-          className={styles.backButton}
-          onClick={handleAddToHomeScreenClick}
-          // disabled={isSafari} // Safari 환경에서 버튼 비활성화
-        >
+
+      {/* iOS 환경 */}
+      {isIOS && !navigator.standalone && (
+        <button className={styles.backButton} onClick={handleAddToHomeScreenClick}>
           <FontAwesomeIcon icon={faMobileScreenButton} />
         </button>
       )}
+
+      {/* android 환경 */}
+      {prompt && !isIOS && (
+        <button className={styles.backButton} onClick={handleAddToHomeScreenClick}>
+          <FontAwesomeIcon icon={faMobileScreenButton} />
+        </button>
+      )}
+
       {showModal && <MessageModal onClickCloseModal={closeModal} message={modalText} />}
     </div>
   );
