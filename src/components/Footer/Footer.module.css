@@ -2,7 +2,10 @@ h1 {
   margin: 0;
 }
 .footer {
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  /* margin-top: auto; */
   min-width: calc(100vw - 82px);
   background-color: #dae591;
   height: 61px;
