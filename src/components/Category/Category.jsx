@@ -5,16 +5,20 @@ function Category({ name, icon, sizeOfWidth, sizeOfHeight }) {
   return (
     <div className={styles.category}>
       <div className={styles.categoryContents}>
-        <img
-          style={{
-            width: sizeOfWidth,
-            height: sizeOfHeight,
-            transform: icon === 'ETC_ICON' ? 'rotate(20deg)' : 'none',
-          }}
-          className={styles.categoryIcon}
-          src={iconFilePath}
-          alt='category icon'
-        />
+        <div className={styles.categoryIcon}>
+          <img
+            style={{
+              width: sizeOfWidth,
+              height: sizeOfHeight,
+              position: icon === 'ETC_ICON' && 'absolute',
+              top: icon === 'ETC_ICON' && '0',
+              transform: icon === 'ETC_ICON' ? 'rotate(20deg)' : 'none',
+            }}
+            // className={styles.categoryIcon}
+            src={iconFilePath}
+            alt='category icon'
+          />
+        </div>
         <span className={styles.categoryMenu}>{name}</span>
       </div>
     </div>
