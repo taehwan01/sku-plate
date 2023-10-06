@@ -1,11 +1,20 @@
 import styles from './Category.module.css';
 
-function Category({ name, icon }) {
+function Category({ name, icon, sizeOfWidth, sizeOfHeight }) {
   const iconFilePath = require(`../../assets/images/categories/${icon}.png`);
   return (
     <div className={styles.category}>
       <div className={styles.categoryContents}>
-        <img className={styles.categoryIcon} src={iconFilePath} alt='category icon' />
+        <img
+          style={{
+            width: sizeOfWidth,
+            height: sizeOfHeight,
+            transform: icon === 'ETC_ICON' ? 'rotate(20deg)' : 'none',
+          }}
+          className={styles.categoryIcon}
+          src={iconFilePath}
+          alt='category icon'
+        />
         <span className={styles.categoryMenu}>{name}</span>
       </div>
     </div>

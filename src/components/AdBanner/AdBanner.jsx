@@ -4,9 +4,9 @@ import KakaoAdFit from './KakaoAdFit';
 function AdBanner() {
   return (
     <>
-      <div className={styles.adBanner}>
+      <section className={styles.adBanner}>
         <KakaoAdFit />
-      </div>
+      </section>
     </>
   );
 }
