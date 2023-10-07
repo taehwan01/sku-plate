@@ -36,7 +36,7 @@ code {
   display: flex;
   flex-direction: column;
   padding-top: 61px;
-  padding-bottom: 61px;
+  padding-bottom: calc(61px + env(safe-area-inset-bottom));
 }
 
 button {
