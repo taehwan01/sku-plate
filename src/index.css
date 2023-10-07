@@ -8,11 +8,11 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
   /* height: calc(var(--vh, 1vh) * 100); */
 }
 
 body {
-  overflow-x: hidden;
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #f1f8f2;
