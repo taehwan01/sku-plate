@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <AdBanner />
-      <hr className={styles.horizontalLine} />
+      <hr />
       <section className={styles.categories}>
         {categories.map((category) => (
           <Category
@@ -24,7 +24,7 @@ function Home() {
           />
         ))}
       </section>
-      <hr className={styles.horizontalLine} />
+      <hr />
       <section className={styles.todaysRestaurant}>
         <div className={styles.todaysRestaurant}>
           <span>오늘의 식당</span>
