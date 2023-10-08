@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
 import styles from './Footer.module.css';
-import backIcon from '../../assets/images/BACK_ICON.png';
-import homeIcon from '../../assets/images/HOME_ICON.png';
-import inquiriesIcon from '../../assets/images/INQUIRIES_ICON.png';
-import myPageIcon from '../../assets/images/MY_ICON.png';
+import backIcon from '../../assets/images/icons/BACK_ICON.png';
+import homeIcon from '../../assets/images/icons/HOME_ICON.png';
+import inquiriesIcon from '../../assets/images/icons/INQUIRIES_ICON.png';
+import myPageIcon from '../../assets/images/icons/MY_ICON.png';
 
 function Footer() {
   const navigate = useNavigate();

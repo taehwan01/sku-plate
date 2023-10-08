@@ -1,5 +1,5 @@
 import styles from './TodaysRestaurant.module.css';
-import RATINGS_ICON from '../../assets/images/RATINGS_ICON.png';
+import RATINGS_ICON from '../../assets/images/icons/RATINGS_ICON.png';
 
 function TodaysRestaurant({ thumbnail, name, tags, ratings }) {
   const imageFilePath = require(`../../assets/images/${thumbnail}.png`);
