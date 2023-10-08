@@ -43,6 +43,13 @@ button {
   cursor: pointer;
 }
 
+hr {
+  width: 100vw;
+  border: 1px solid #d9d9d9;
+  background-color: #d9d9d9;
+  margin: 0;
+}
+
 .jua {
   font-family: 'Jua', sans-serif;
 }
