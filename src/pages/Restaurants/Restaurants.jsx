@@ -19,28 +19,30 @@ function Restaurants() {
 
   return (
     <div>
-      <section aria-label='search restaurant'>
-        <SearchBox />
-      </section>
-      <hr />
-      <section className={styles.categories}>
-        {categories.map((category) => (
-          <div
-            key={category.id}
-            className={styles.category}
-            onClick={() => navigate(`/categories/${category.name_eng}`)}
-          >
-            <span>{category.name}</span>
+      <section aria-label='search bar with categories' className={styles.searchBar}>
+        <section aria-label='search restaurant'>
+          <SearchBox />
+        </section>
+        <hr />
+        <section className={styles.categories}>
+          {categories.map((category) => (
             <div
-              className={styles.selectedCategoryTag}
-              style={{ backgroundColor: `${categoryParam === category.name_eng ? '#e05757' : 'transparent'}` }}
+              key={category.id}
+              className={styles.category}
+              onClick={() => navigate(`/categories/${category.name_eng}`)}
             >
-              {/* selected category tagline */}
+              <span>{category.name}</span>
+              <div
+                className={styles.selectedCategoryTag}
+                style={{ backgroundColor: `${categoryParam === category.name_eng ? '#e05757' : 'transparent'}` }}
+              >
+                {/* selected category tagline */}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </section>
+        <hr />
       </section>
-      <hr />
       <ClassifiedRestaurants currentCategoryRestaurants={restaurants[categoryParam]} />
       {/* <section aria-label='classified restaurants' className={styles.classifiedRestaurants}>
         {restaurants[currentCategory].map((restaurant) => (

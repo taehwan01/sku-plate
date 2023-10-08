@@ -1,5 +1,5 @@
 .classifiedRestaurants {
-  padding: 20px 27px;
+  padding: 126px 27px 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 27px;
