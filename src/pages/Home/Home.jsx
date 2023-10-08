@@ -11,7 +11,7 @@ function Home() {
     <>
       <AdBanner />
       <hr />
-      <section className={styles.categories}>
+      <section title='메뉴 카테고리' aria-label='categories' className={styles.categories}>
         {categories.map((category) => (
           <Category
             key={category.id}
@@ -25,7 +25,7 @@ function Home() {
         ))}
       </section>
       <hr />
-      <section className={styles.todaysRestaurant}>
+      <section title='오늘의 식당' aria-label="today's restaurant" className={styles.todaysRestaurant}>
         <div className={styles.todaysRestaurant}>
           <span>오늘의 식당</span>
         </div>

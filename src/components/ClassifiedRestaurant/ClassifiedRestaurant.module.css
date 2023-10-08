@@ -1,0 +1,34 @@
+.classifiedRestaurant {
+  /* background-color: rgba(96, 44, 220, 0.5); */
+  /* width: calc((100% - 71px) / 2); */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: fill;
+  background-color: white;
+  border-radius: 23px;
+}
+
+.name {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.restaurantInfo {
+  margin-top: 9px;
+  font-size: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
