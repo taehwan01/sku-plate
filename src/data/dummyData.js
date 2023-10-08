@@ -1,11 +1,10 @@
-const all = [];
 const etc = [];
 const dessert = [];
 const bar = [];
 
 const korean = [
   {
-    id: 1,
+    id: 101,
     name: '우정식당',
     category: '한식',
     tags: ['불고기', '제육볶음'],
@@ -13,7 +12,7 @@ const korean = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 2,
+    id: 102,
     name: '무교동 낙지',
     category: '한식',
     tags: [
@@ -29,7 +28,7 @@ const korean = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 3,
+    id: 103,
     name: '치즈밥있슈',
     category: '한식',
     tags: ['치즈밥', '알밥', '퓨전'],
@@ -37,7 +36,7 @@ const korean = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 4,
+    id: 104,
     name: '서경대 앞 부산아지매국밥128945670137685',
     category: '한식',
     tags: [
@@ -60,7 +59,7 @@ const korean = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 5,
+    id: 105,
     name: '우정식당',
     category: '한식',
     tags: ['불고기', '제육볶음'],
@@ -68,7 +67,7 @@ const korean = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 6,
+    id: 106,
     name: '무교동 낙지',
     category: '한식',
     tags: ['낙지', '차돌 순두부'],
@@ -76,7 +75,7 @@ const korean = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 7,
+    id: 107,
     name: '치즈밥있슈',
     category: '한식',
     tags: ['치즈밥', '알밥', '퓨전'],
@@ -84,7 +83,7 @@ const korean = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 8,
+    id: 108,
     name: '부산아지매국밥',
     category: '한식',
     tags: ['국밥', '만두국'],
@@ -95,7 +94,7 @@ const korean = [
 
 const japanese = [
   {
-    id: 1,
+    id: 201,
     name: '태준식탁',
     category: '일식',
     tags: ['덮밥', '돈까스'],
@@ -103,7 +102,7 @@ const japanese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 2,
+    id: 202,
     name: '한림관',
     category: '일식',
     tags: ['돈까스', '우동'],
@@ -111,7 +110,7 @@ const japanese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 3,
+    id: 203,
     name: '경성마라탕',
     category: '일식',
     tags: ['마라탕', '마라샹궈'],
@@ -119,7 +118,7 @@ const japanese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 4,
+    id: 204,
     name: '태준식탁',
     category: '일식',
     tags: ['덮밥', '돈까스'],
@@ -127,7 +126,7 @@ const japanese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 5,
+    id: 205,
     name: '한림관',
     category: '일식',
     tags: ['돈까스', '우동'],
@@ -135,7 +134,7 @@ const japanese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 6,
+    id: 206,
     name: '경성마라탕',
     category: '일식',
     tags: ['마라탕', '마라샹궈'],
@@ -143,7 +142,7 @@ const japanese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 7,
+    id: 207,
     name: '한림관',
     category: '일식',
     tags: ['돈까스', '우동'],
@@ -151,7 +150,7 @@ const japanese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 8,
+    id: 208,
     name: '경성마라탕',
     category: '일식',
     tags: ['마라탕', '마라샹궈'],
@@ -162,7 +161,7 @@ const japanese = [
 
 const chinese = [
   {
-    id: 1,
+    id: 301,
     name: '태준식탁',
     category: '중식',
     tags: ['덮밥', '돈까스'],
@@ -170,7 +169,7 @@ const chinese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 2,
+    id: 302,
     name: '한림관',
     category: '중식',
     tags: ['돈까스', '우동'],
@@ -178,7 +177,7 @@ const chinese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 3,
+    id: 303,
     name: '경성마라탕',
     category: '중식',
     tags: ['마라탕', '마라샹궈'],
@@ -186,7 +185,7 @@ const chinese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 4,
+    id: 304,
     name: '태준식탁',
     category: '중식',
     tags: ['덮밥', '돈까스'],
@@ -194,7 +193,7 @@ const chinese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 5,
+    id: 305,
     name: '한림관',
     category: '중식',
     tags: ['돈까스', '우동'],
@@ -202,7 +201,7 @@ const chinese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 6,
+    id: 306,
     name: '경성마라탕',
     category: '중식',
     tags: ['마라탕', '마라샹궈'],
@@ -210,7 +209,7 @@ const chinese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 7,
+    id: 307,
     name: '한림관',
     category: '중식',
     tags: ['돈까스', '우동'],
@@ -218,7 +217,7 @@ const chinese = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 8,
+    id: 308,
     name: '경성마라탕',
     category: '중식',
     tags: ['마라탕', '마라샹궈'],
@@ -229,7 +228,7 @@ const chinese = [
 
 const western = [
   {
-    id: 1,
+    id: 401,
     name: '태준식탁',
     category: '양식',
     tags: ['덮밥', '돈까스'],
@@ -237,7 +236,7 @@ const western = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 2,
+    id: 402,
     name: '한림관',
     category: '양식',
     tags: ['돈까스', '우동'],
@@ -245,7 +244,7 @@ const western = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 3,
+    id: 403,
     name: '경성마라탕',
     category: '양식',
     tags: ['마라탕', '마라샹궈'],
@@ -253,7 +252,7 @@ const western = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 4,
+    id: 404,
     name: '태준식탁',
     category: '양식',
     tags: ['덮밥', '돈까스'],
@@ -261,7 +260,7 @@ const western = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 5,
+    id: 405,
     name: '한림관',
     category: '양식',
     tags: ['돈까스', '우동'],
@@ -269,7 +268,7 @@ const western = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 6,
+    id: 406,
     name: '경성마라탕',
     category: '양식',
     tags: ['마라탕', '마라샹궈'],
@@ -277,7 +276,7 @@ const western = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 7,
+    id: 407,
     name: '한림관',
     category: '양식',
     tags: ['돈까스', '우동'],
@@ -285,7 +284,7 @@ const western = [
     thumbnail: 'USER_ICON',
   },
   {
-    id: 8,
+    id: 408,
     name: '경성마라탕',
     category: '양식',
     tags: ['마라탕', '마라샹궈'],
@@ -293,6 +292,8 @@ const western = [
     thumbnail: 'USER_ICON',
   },
 ];
+
+const all = [...korean, ...japanese, ...chinese, ...western, ...etc, ...dessert, ...bar];
 
 export { korean, japanese, chinese, western };
 export const restaurants = { all, korean, japanese, chinese, western, etc, dessert, bar };
