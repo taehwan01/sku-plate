@@ -9,8 +9,8 @@ import styles from './Header.module.css';
 import MessageModal from '../MessageModal/MessageModal';
 
 const safariModal = (
-  <span className={styles.modalModal}>
-    홈화면에 <span className={styles.appName}>서경 PLATE</span>를 추가하시려면
+  <span>
+    홈화면에 <span className={styles.appName}>서경 PLATE</span> 를 추가하시려면
     <br />
     기기 하단 탭 버튼 <FontAwesomeIcon className={styles.shareIcon} icon={faArrowUpFromBracket} /> 클릭 후
     <br />
@@ -46,6 +46,8 @@ function Header() {
   }, [prompt]);
 
   const handleAddToHomeScreenClick = () => {
+    const modalTimerMilliseconds = 5000;
+
     if (!isIOS && prompt) {
       prompt.prompt();
 
@@ -59,7 +61,7 @@ function Header() {
         }
         const timer = setTimeout(() => {
           setShowModal(false);
-        }, 5000);
+        }, modalTimerMilliseconds);
         setModalTimer(timer);
       });
     } else if (isIOS) {
@@ -70,7 +72,7 @@ function Header() {
       setShowModal(true);
       const timer = setTimeout(() => {
         setShowModal(false);
-      }, 5000);
+      }, modalTimerMilliseconds);
       setModalTimer(timer);
     }
   };

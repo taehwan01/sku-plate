@@ -1,4 +1,4 @@
-.safariModal {
+.messageModal {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,39 +12,44 @@
 }
 
 .modalBox {
-  /* width: 92vw;
-  height: 37vh; */
-  padding: 25px 30px;
+  width: 85vw;
+  /* height: 37vh; */
   background-color: white;
   box-shadow: 0 0 15px 5px rgb(58, 58, 58);
   border-radius: 10px;
+}
+.modalContents {
+  padding: 0 25px 15px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.lightBulbIcon {
-  font-size: 30px;
-  color: #dae591;
+.skuplateLogo {
+  width: 146px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  /* height: 24.64px; */
 }
 .modalCloseButton {
-  width: 80px;
-  height: 30px;
-  font-size: 17px;
-  background-color: transparent;
-  border: 2px solid #dae591;
-  border-radius: 10px;
-  color: #dae591;
+  width: 100%;
+  height: 49px;
+  font-size: 15px;
+  background-color: #dae591;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  color: black;
+  letter-spacing: 5px;
   font-weight: bold;
 }
 .modalCloseButton:hover {
-  background-color: #dae591;
-  color: white;
+  background-color: #dfe4c3;
+  color: rgb(70, 70, 70);
   font-weight: bold;
 }
 .modalCloseButton:active {
-  background-color: #dae591;
-  color: white;
+  background-color: #dfe4c3;
+  color: rgb(70, 70, 70);
   font-weight: bold;
 }
 
@@ -52,4 +57,5 @@
   text-align: center;
   font-size: 17px;
   line-height: 35px;
+  color: #726c6c;
 }
