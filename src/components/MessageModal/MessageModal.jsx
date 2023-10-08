@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
-
 import styles from './MessageModal.module.css';
 import SKUPLATE_LOGO_S from '../../assets/images/SKUPLATE_LOGO_S.png';
 
