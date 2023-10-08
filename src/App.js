@@ -22,7 +22,7 @@ function App() {
       <Header />
       <Routes style={{ flex: 1 }}>
         <Route path='/' element={<Home />} />
-        <Route path='/categories/:category' element={<Restaurants />} />
+        <Route path='/categories/:currentCategory' element={<Restaurants />} />
         <Route path='/inquiries' element={<h1>문의하기</h1>} />
         <Route path='/my-page' element={<h1>MY 페이지</h1>} />
       </Routes>
