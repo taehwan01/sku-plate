@@ -4,6 +4,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import styles from './Restaurants.module.css';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import { categories } from '../../data/categories';
+import ClassifiedRestaurant from '../../components/ClassifiedRestaurant/ClassifiedRestaurant';
+
+import { restaurants } from '../../data/dummyData';
 
 function Restaurants() {
   const { currentCategory } = useParams();
@@ -11,6 +14,7 @@ function Restaurants() {
 
   useEffect(() => {
     console.log(currentCategory);
+    console.log('Restaurants: ', restaurants[currentCategory]);
   }, [currentCategory]);
 
   return (
@@ -37,7 +41,11 @@ function Restaurants() {
         ))}
       </section>
       <hr />
-      <section aria-label='classified restaurants'>{/* <ClassifiedRestaurants/> */}</section>
+      <section aria-label='classified restaurants' className={styles.classifiedRestaurants}>
+        {restaurants[currentCategory].map((restaurant) => (
+          <ClassifiedRestaurant key={restaurant.id} restaurant={restaurant} />
+        ))}
+      </section>
     </div>
   );
 }

@@ -21,3 +21,11 @@
   width: 89.5%;
   height: 3px;
 }
+
+.classifiedRestaurants {
+  padding: 20px 27px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 27px;
+  grid-row-gap: 12px;
+}
