@@ -38,7 +38,7 @@ function Footer() {
         <span className={`material-symbols-outlined ${styles.menuIcons}`}>edit_note</span>
         <span className={styles.menuLabels}>문의</span>
       </div>
-      <div className={styles.icon} onClick={() => navigate('/my-page')}>
+      <div className={styles.icon} onClick={() => navigate('/my-page/comments')}>
         {/* <img className={styles.menuIcons} src={myPageIcon} alt='만든이' /> */}
         <span className={`material-symbols-outlined ${styles.menuIcons}`} style={{ fontWeight: 'normal' }}>
           sentiment_satisfied

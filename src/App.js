@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import { useEffect } from 'react';
 import Home from './pages/Home/Home';
 import Restaurants from './pages/Restaurants/Restaurants';
-import InquiryModal from './components/InquiryModal/InquiryModal';
+import MyPage from './pages/MyPage/MyPage';
 
 function App() {
   useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
       <Routes style={{ flex: 1 }}>
         <Route path='/' element={<Home />} />
         <Route path='/categories/:categoryParam' element={<Restaurants />} />
-        <Route path='/my-page' element={<h1>MY 페이지</h1>} />
+        <Route path='/my-page/:myContents' element={<MyPage />} />
       </Routes>
       <Footer />
     </div>

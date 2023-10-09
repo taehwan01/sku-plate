@@ -5,7 +5,6 @@
   border-radius: 21px;
   border: none;
   padding: 12px 10px;
-  margin-bottom: 20px;
   display: flex;
 }
 h1,
@@ -40,6 +39,10 @@ h6 {
   font-size: 10px;
 }
 
+.rightContents {
+  position: relative;
+}
+
 div.ratings {
   height: 22px;
   display: flex;
@@ -47,9 +50,11 @@ div.ratings {
   /* justify-content: center; */
 }
 .ratingsIcon {
-  width: 20px;
-  height: 20px;
+  font-size: 20px;
+  /* width: 20px;
+  height: 20px; */
   margin-right: 7px;
+  color: #f9ef14;
 }
 .ratingsScore {
   padding-top: 2px;
@@ -61,4 +66,12 @@ div.ratings {
   text-align: center;
   align-items: center; */
   /* justify-content: center; */
+}
+
+.bookmark {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  font-size: 31px;
+  color: black;
 }

@@ -44,11 +44,6 @@ function Restaurants() {
         <hr />
       </section>
       <ClassifiedRestaurants currentCategoryRestaurants={restaurants[categoryParam]} />
-      {/* <section aria-label='classified restaurants' className={styles.classifiedRestaurants}>
-        {restaurants[currentCategory].map((restaurant) => (
-          <ClassifiedRestaurant key={restaurant.id} restaurant={restaurant} />
-        ))}
-      </section> */}
     </div>
   );
 }

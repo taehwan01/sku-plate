@@ -45,7 +45,8 @@ button {
 
 hr {
   width: 100vw;
-  border: 1px solid #d9d9d9;
+  border: none;
+  height: 2px;
   background-color: #d9d9d9;
   margin: 0;
 }
