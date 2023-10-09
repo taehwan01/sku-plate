@@ -35,3 +35,11 @@
   color: #dae591;
   font-weight: bold;
 }
+
+.headerIcons {
+  font-size: 33px;
+  position: relative;
+  /* top: 9%; */
+  top: 11.5%;
+  /* font-weight: bold; */
+}

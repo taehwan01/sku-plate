@@ -24,9 +24,8 @@ h1 {
   justify-content: center;
 }
 .menuIcons {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 3px;
+  font-size: 30px;
+  font-weight: bold;
 }
 .menuLabels {
   height: 14px;

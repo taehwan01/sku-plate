@@ -16,9 +16,7 @@ function SearchBox() {
   return (
     <div className={styles.searchBox}>
       <div className={styles.searchButton} style={{ left: isFocused ? `${searchInputFocusedWidth}px` : '27px' }}>
-        {/* <img src={SEARCH_ICON} alt='search-icon' className={styles.searchIcon} /> */}
         <span className={`material-symbols-outlined ${styles.searchIcon}`}>search</span>
-        {/* <FontAwesomeIcon icon={faMagnifyingGlass} className={`${styles.searchIcon} icons`} /> */}
       </div>
       <input
         type='text'
@@ -28,9 +26,7 @@ function SearchBox() {
         onBlur={() => setIsFocused(false)}
       />
       <div className={styles.mapButton}>
-        {/* <img src={MAP_ICON} alt='map-icon' className={styles.mapIcon} /> */}
-        <span class={`material-symbols-outlined ${styles.mapIcon}`}>map</span>
-        {/* <FontAwesomeIcon icon={faMap} className={`${styles.mapIcon} icons`} /> */}
+        <span className={`material-symbols-outlined ${styles.mapIcon}`}>map</span>
         <span className={styles.mapLabel}>지도</span>
       </div>
     </div>
