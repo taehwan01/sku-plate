@@ -54,6 +54,18 @@ hr {
   font-family: 'Jua', sans-serif;
 }
 
+/* App.css */
+@font-face {
+  font-family: 'The Jamsil 3 Regular';
+  src: url('./assets/fonts/The Jamsil 3 Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.the-jamsil {
+  font-family: 'The Jamsil 3 Regular', sans-serif;
+}
+
 .icons {
   color: #726c6c;
 }

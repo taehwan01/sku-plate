@@ -1,0 +1,86 @@
+.inquiryModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 122px - env(safe-area-inset-bottom));
+  margin-top: 61px;
+  background-color: rgba(217, 217, 217, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modalBox {
+  width: 85vw;
+  /* height: 49.88vh; */
+  background-color: white;
+  border-radius: 31px;
+  box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.modalContents {
+  position: relative;
+  padding: 0 16px 18px 16px;
+}
+
+.topBar {
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalTitle {
+  font-size: 25px;
+  color: black;
+  letter-spacing: 0.4rem;
+}
+.exitButton {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+.exitIcon {
+  font-size: 20px;
+  color: #726c6c;
+}
+
+.modalMessage {
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  height: 58px;
+  display: flex;
+  align-items: center;
+}
+
+.userInquiry {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  resize: none;
+  box-sizing: border-box;
+  border: 1px solid #817a7a;
+  border-radius: 19px;
+  font-size: 12px;
+  line-height: 1rem;
+}
+
+.uploadButton {
+  position: relative;
+  left: calc(85vw - 148px - 32px);
+  width: 148px;
+  height: 53px;
+  margin-top: 30px;
+  font-size: 20px;
+  letter-spacing: 0.2rem;
+  background-color: #dae591;
+  border: 2px solid #726c6c;
+  border-radius: 43.5px;
+  box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
+}
