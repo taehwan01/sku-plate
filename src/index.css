@@ -43,6 +43,30 @@ button {
   cursor: pointer;
 }
 
+hr {
+  width: 100vw;
+  border: none;
+  height: 2px;
+  background-color: #d9d9d9;
+  margin: 0;
+}
+
 .jua {
   font-family: 'Jua', sans-serif;
+}
+
+/* App.css */
+@font-face {
+  font-family: 'The Jamsil 3 Regular';
+  src: url('./assets/fonts/The Jamsil 3 Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.the-jamsil {
+  font-family: 'The Jamsil 3 Regular', sans-serif;
+}
+
+.icons {
+  color: #726c6c;
 }

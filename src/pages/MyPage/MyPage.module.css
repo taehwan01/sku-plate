@@ -1,0 +1,72 @@
+.myPage {
+  margin-bottom: 20px;
+}
+
+.profileInfo {
+  margin: 20px 10px 42px;
+  padding: 12px 18px;
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+}
+
+.profileImage {
+  width: 56px;
+  background-color: #d9d9d9;
+  border-radius: 100%;
+}
+.profileTextInfo {
+  font-size: 10px;
+  letter-spacing: 0.2rem;
+  line-height: 1.2rem;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.myContents {
+  /* width: calc(100% - 32px); */
+  width: 100%;
+  background-color: white;
+  /* padding: 0 16px; */
+}
+.contentsCategories {
+  position: relative;
+  width: calc(100% - 120px);
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+.categoryTags {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selectedCategoryTag {
+  position: absolute;
+  bottom: 1px;
+  width: 80px;
+  height: 3px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  /* height: 100px; */
+}
+.commentText {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.commentDate {
+  font-size: 10px;
+  color: #726c6c;
+  margin-bottom: 10px;
+}
+.commentRestaurant {
+  font-size: 10px;
+  margin-bottom: 12px;
+}

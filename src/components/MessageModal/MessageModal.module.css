@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(217, 217, 217, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +15,7 @@
   width: 85vw;
   /* height: 37vh; */
   background-color: white;
-  box-shadow: 0 0 15px 5px rgb(58, 58, 58);
+  box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
   border-radius: 10px;
 }
 .modalContents {

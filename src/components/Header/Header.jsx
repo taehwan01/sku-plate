@@ -88,20 +88,43 @@ function Header() {
   return (
     <div className={styles.header}>
       <button className={styles.backButton} onClick={() => navigate(-1)}>
-        <FontAwesomeIcon icon={faAngleLeft} />
+        {/* <FontAwesomeIcon icon={faAngleLeft} /> */}
+        {/* <span
+          className={`material-symbols-outlined ${styles.headerIcons}`}
+          // style={{ fontWeight: 'bold' }}
+          // 
+        >
+          navigate_before
+        </span> */}
+        <span
+          className={`material-symbols-outlined ${styles.headerIcons}`}
+          // style={{ fontWeight: 'bold' }}
+          style={{ fontSize: '30px' }}
+          //
+        >
+          arrow_back_ios_new
+        </span>
       </button>
 
       {/* iOS 환경 */}
       {isIOS && !navigator.standalone && (
         <button className={styles.backButton} onClick={handleAddToHomeScreenClick}>
-          <FontAwesomeIcon icon={faMobileScreenButton} />
+          {/* <FontAwesomeIcon icon={faMobileScreenButton} /> */}
+          <span
+            className={`material-symbols-outlined ${styles.headerIcons}`}
+            // style={{ fontWeight: 'bold' }}
+            //
+          >
+            add_to_home_screen
+          </span>
         </button>
       )}
 
       {/* android 환경 */}
       {prompt && !isIOS && (
         <button className={styles.backButton} onClick={handleAddToHomeScreenClick}>
-          <FontAwesomeIcon icon={faMobileScreenButton} />
+          {/* <FontAwesomeIcon icon={faMobileScreenButton} /> */}
+          <span className={`material-symbols-outlined ${styles.headerIcons}`}>add_to_home_screen</span>
         </button>
       )}
 
