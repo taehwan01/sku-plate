@@ -25,6 +25,7 @@ function App() {
       <Routes style={{ flex: 1 }}>
         <Route path="/" element={<Home />} />
         <Route path="/categories/:categoryParam" element={<Restaurants />} />
+        <Route path="/restaurant/:restaurantParam" element={<Restaurant />} />
         <Route path='/my-page/:myContents' element={<MyPage />} />
       </Routes>
       <Footer />
