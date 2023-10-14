@@ -13,7 +13,7 @@ export function KakaoMap() {
   }, []);
 
   return (
-    <div>
+    <div style={{display:"flex", justifyContent:"center", width:"100%", backgroundColor:"white"}}>
       <div id="map" style={{ width: "393px", height: "179px" }}></div>
     </div>
   );

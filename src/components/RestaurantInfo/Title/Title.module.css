@@ -11,7 +11,7 @@
   width: 371px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -22,9 +22,10 @@
 }
 .name {
   margin: 5px;
-  font-size: 30px;
+  font-size: 25px;
 }
-span.tags {
+.tags {
+  padding: 5px;
   display: flex;
   flex-direction: row;
   font-size: 10px;
