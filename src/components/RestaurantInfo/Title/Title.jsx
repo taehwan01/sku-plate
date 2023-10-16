@@ -1,7 +1,7 @@
 import styles from "./Title.module.css";
 
-export function Title({ restaurant }) {
-  const { name, tags, ratings } = restaurant;
+export function Title({ restaurantData }) {
+  const { name, tags, ratings } = restaurantData;
 
   return (
     <div className={styles.container}>

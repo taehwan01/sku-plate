@@ -1,8 +1,17 @@
-export const menus = [
+export const restaurantData = [
   {
-    id: 203,
+    id: 101,
     name: "경성 마라탕",
     tags: ['마라탕', '마라샹궈'],
+    ratings: 4.7,
+    introduce: "최고의 마라 중독",
+    information: {
+      detail: "예약 가능, 포장 가능",
+      facility:{
+        park: true,
+        wifi: true,
+      }
+    },
     menu: [
       {
         category: "대표메뉴",
