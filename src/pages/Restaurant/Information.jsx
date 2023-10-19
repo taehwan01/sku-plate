@@ -1,6 +1,6 @@
-import styles from "./Title.module.css";
+import styles from "./Restaurant.module.css";
 
-export function Title({ restaurantData }) {
+function Information({ restaurantData }) {
   const { name, tags, ratings } = restaurantData;
 
   return (
@@ -32,8 +32,10 @@ export function Title({ restaurantData }) {
         <span className={`material-icons ${styles.callingIcon}`}>
           phone_in_talk
         </span>
-        <span>전화 걸기</span>
+        <span style={{fontSize:"15px"}}>전화 걸기</span>
       </div>
     </div>
   );
 }
+
+export default Information;

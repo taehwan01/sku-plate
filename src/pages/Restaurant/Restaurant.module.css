@@ -28,3 +28,77 @@
   width: 80px;
   height: 3px;
 }
+
+.container {
+  background-color: white;
+  padding: 20px 0 30px 0;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.info {
+  width: 371px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  width: 146px;
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  margin: 5px;
+  font-size: 25px;
+}
+.tags {
+  padding: 5px;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+div.ratings {
+  height: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ratingsIcon {
+  margin-right: 7px;
+  color: #f9ef14;
+}
+.ratingsScore {
+  padding-top: 2px;
+  width: 36px;
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+}
+.bookmarkIcon {
+  margin-right: 7px;
+}
+
+.call {
+  width: 371px;
+  height: 39px;
+  margin-top: 10px;
+  border: solid 1px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.callingIcon {
+  margin-right: 5px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}

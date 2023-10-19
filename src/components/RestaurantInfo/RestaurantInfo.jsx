@@ -1,10 +1,10 @@
-import styles from "./Information.module.css";
+import styles from "./RestaurantInfo.module.css";
 
-export function Information({ restaurantData }) {
+function RestaurantInfo({ restaurantData }) {
   const { introduce, information } = restaurantData;
   return (
     <div className={styles.container}>
-      <div className={styles.introduce}>
+      <div className={styles.information}>
         <span>식당 소개</span>
         <span className={styles.text}>{introduce}</span>
       </div>
@@ -45,3 +45,5 @@ export function Information({ restaurantData }) {
     </div>
   );
 }
+
+export default RestaurantInfo;

@@ -1,0 +1,47 @@
+.container {
+  width: 393px;
+  height: 100px;
+  padding: 11px;
+  border: 1px solid #E8D5D5;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.commentItem {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+.profileImage {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  background-color: white;
+  border-radius: 100%;
+}
+.photo {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  background-color: white;
+  border-radius: 14px;
+}
+.date {
+  font-size: 8px;
+  margin-top: 5px;
+  display: flex;
+  justify-self: flex-end;
+}
+.ratingsIcon {
+  font-size: 15px;
+}

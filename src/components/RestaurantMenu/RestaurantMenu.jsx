@@ -1,7 +1,6 @@
-import styles from "./Menu.module.css";
+import styles from "./RestaurantMenu.module.css";
 
-export function Menu({ restaurantData }) {
-  console.log(restaurantData);
+function RestaurantMenu({ restaurantData }) {
   const { name, tags, menu } = restaurantData;
 
   return (
@@ -23,9 +22,9 @@ export function Menu({ restaurantData }) {
             </span>
             <hr style={{ width: "100%", marginBottom: "15px" }} />
             {menu.items.map((item, index) => (
-              <div key={index} className={styles.menu}>
-                <span>{item.name}</span>
-                <span>
+              <div key={index} className={styles.menu} >
+                <span style={{fontSize:"12px"}}>{item.name}</span>
+                <span style={{fontSize:"12px"}}>
                   {item.price.toLocaleString("en-US", {
                     style: "currency",
                     currency: "KRW",
@@ -39,3 +38,5 @@ export function Menu({ restaurantData }) {
     </div>
   );
 }
+
+export default RestaurantMenu;
