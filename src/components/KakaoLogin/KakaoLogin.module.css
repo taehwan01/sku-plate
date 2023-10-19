@@ -1,0 +1,21 @@
+.Icon {
+    width: 35px;
+    height: 35px;
+    margin: 12px 24px;
+}
+
+.loginBox {
+    height: 69px;
+    width: 317px;
+    margin: 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text {
+    font-size: 15px;
+    margin-left: 10px;
+}

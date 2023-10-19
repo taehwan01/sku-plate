@@ -11,7 +11,7 @@ function Comment({ restaurantData }) {
 
   return (
     <div style={{marginBottom:"97px"}}>
-      <section aria-label="restaurant commnets" className={styles.container}>
+      <section aria-label="restaurant commnets" className={styles.container} style={{ padding:"0" }}>
         {comments.map((comment) => (
           <ListedComment key={comment.num} comment={comment} />
         ))}

@@ -1,12 +1,15 @@
+import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import { useEffect } from "react";
+
 import Home from "./pages/Home/Home";
 import Restaurants from "./pages/Restaurants/Restaurants";
 import Restaurant from "./pages/Restaurant/Restaurant";
 import MyPage from "./pages/MyPage/MyPage";
+import Login from "./pages/Login/Login";
+import KakaoOauth from "./components/KakaoLogin/KakaoOauth";
 
 function App() {
   useEffect(() => {
@@ -27,6 +30,8 @@ function App() {
         <Route path="/categories/:categoryParam" element={<Restaurants />} />
         <Route path="/restaurant/:restaurantParam" element={<Restaurant />} />
         <Route path='/my-page/:myContents' element={<MyPage />} />
+        <Route path='/oauth' element={<Login />} />
+        <Route path='/oauth/kakaoLogin' element={<KakaoOauth />} />
       </Routes>
       <Footer />
     </div>
