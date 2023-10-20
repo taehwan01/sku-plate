@@ -2,15 +2,16 @@ export const restaurantData = [
   {
     id: 101,
     name: "경성 마라탕",
-    tags: ['마라탕', '마라샹궈'],
+    tags: ["마라탕", "마라샹궈"],
+    address: '서울 성북구 서경로 96 2층',
     ratings: 4.7,
     introduce: "최고의 마라 중독",
     information: {
       detail: "예약 가능, 포장 가능",
-      facility:{
+      facility: {
         park: true,
         wifi: true,
-      }
+      },
     },
     menu: [
       {
@@ -114,7 +115,7 @@ export const restaurantData = [
   {
     id: 204,
     name: "경성 마라탕",
-    tags: ['마라탕', '마라샹궈'],
+    tags: ["마라탕", "마라샹궈"],
     menu: [
       {
         category: "대표메뉴",

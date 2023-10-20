@@ -23,6 +23,11 @@
   padding: 0 16px 18px 16px;
 }
 
+input {
+  border: none;
+  outline: none;
+}
+
 .ratingInquiry {
   width: 100%;
   height: 31px;

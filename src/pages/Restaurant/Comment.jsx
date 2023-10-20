@@ -4,9 +4,9 @@ import { commentData } from "../../data/commentData";
 
 import styles from "./Restaurant.module.css";
 
-function Comment({ restaurantData }) {
-  const restaurantId = 101;
-  const comment = commentData.find((comment) => comment.id === restaurantId);
+function Comment({restaurantData}) {
+  console.log(restaurantData)
+  const comment = commentData.find((comment) => comment.id === restaurantData);
   const { comments } = comment;
 
   return (
