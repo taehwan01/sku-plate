@@ -66,15 +66,16 @@ function ListedComment({ comment }) {
             alt="user profileImage"
           />
           <div className={styles.commentItem}>
-            <span style={{ fontSize: "10px", marginLeft: "8px" }}>{name}</span>
+            <span style={{ fontSize: "12px", marginLeft: "5px" }}>{name}</span>
             <div>{stars}</div>
           </div>
         </div>
-        <span style={{ margin: "10px", fontSize: "8px" }}>{text}</span>
+        <span style={{fontSize: "15px"}}>{text}</span>
       </div>
-
+      <div style={{ display: "flex", justifyContent: "space-around"}}>
       <span className={styles.date}>{koreaTime}</span>
-      <img className={styles.photo} src={photo} alt="" />
+        <img className={styles.photo} src={photo} alt="" />
+      </div>
     </div>
   );
 }

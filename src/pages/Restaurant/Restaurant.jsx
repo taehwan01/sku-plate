@@ -31,7 +31,7 @@ function Restaurant() {
   
   return (
     <div>
-      <section aria-label="place-info">
+      <section aria-label="place-info" className={styles.information}>
         <Information restaurantData={restaurant}/>
       </section>
       <section aria-label="kakaoMap" className={styles.kakaoMap}>
@@ -44,7 +44,7 @@ function Restaurant() {
             setTab(0);
           }}
         >
-          <div className={styles.tabContent}>메뉴</div>
+          <div className={styles.tabCategory}>메뉴</div>
           <div
             className={styles.selectedTab}
             style={{
@@ -59,7 +59,7 @@ function Restaurant() {
             setTab(1);
           }}
         >
-          <div className={styles.tabContent}>정보</div>
+          <div className={styles.tabCategory}>정보</div>
           <div
             className={styles.selectedTab}
             style={{
@@ -74,7 +74,7 @@ function Restaurant() {
             setTab(2);
           }}
         >
-          <div className={styles.tabContent}>댓글</div>
+          <div className={styles.tabCategory}>댓글</div>
           <div
             className={styles.selectedTab}
             style={{

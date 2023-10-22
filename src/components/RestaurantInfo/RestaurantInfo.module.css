@@ -2,10 +2,8 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .information {
-    width: 371px;
     margin: 25px;
     display: flex;
     flex-direction: column;
@@ -22,14 +20,15 @@
 .infoIcon {
     margin-left: 5px;
 }
-.facility {
+.facilityIcon {
     margin: 10px 10px;
-    font-size: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.facilityIcon {
-    font-size: 45px;
+.facility {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
 }

@@ -18,18 +18,18 @@ function RestaurantInfo({ restaurantData }) {
           <span className={`material-icons ${styles.infoIcon}`}>info</span>
           <span style={{ marginLeft: "5px" }}>시설 정보</span>
         </div>
-        <div style={{ display:"flex", flexDirection:"row" }}>
-          <div className={styles.facility} is={information.park}>
-            <span className={`material-icons ${styles.facilityIcon}`}>
+        <div className={styles.facility}>
+          <div className={styles.facilityIcon} is={information.park}>
+            <span className={`material-icons`} style={{fontSize: "45px"}}>
               local_parking
             </span>
-            <span>주차</span>
+            <span style={{fontSize: "10px"}}>주차</span>
           </div>
-          <div className={styles.facility} is={information.wifi}>
-            <span className={`material-icons ${styles.facilityIcon}`}>
+          <div className={styles.facilityIcon} is={information.wifi}>
+            <span className={`material-icons`} style={{fontSize: "45px"}}>
               wifi
             </span>
-            <span>WIFI</span>
+            <span style={{fontSize: "10px"}}>WIFI</span>
           </div>
         </div>
 

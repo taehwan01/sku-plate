@@ -16,6 +16,7 @@ export const restaurantData = [
     menu: [
       {
         category: "대표메뉴",
+        categoryImage: ["JAPANESE_ICON"],
         items: [
           {
             name: "인기 일반 마라탕",
@@ -33,6 +34,7 @@ export const restaurantData = [
       },
       {
         category: "세트메뉴",
+        categoryImage: ["JAPANESE_ICON", "JAPANESE_ICON"],
         items: [
           {
             name: "일반 마라탕+미니꿔바로",
@@ -83,6 +85,7 @@ export const restaurantData = [
       },
       {
         category: "요리류",
+        categoryImage: ["JAPANESE_ICON"],
         items: [
           {
             name: "마파두부",
@@ -116,9 +119,11 @@ export const restaurantData = [
     id: 204,
     name: "경성 마라탕",
     tags: ["마라탕", "마라샹궈"],
+    categoryImage: ["JAPANESE_ICON"],
     menu: [
       {
         category: "대표메뉴",
+        categoryImage: "JAPANESE_ICON",
         items: [
           {
             name: "인기 일반 마라탕",
@@ -136,6 +141,7 @@ export const restaurantData = [
       },
       {
         category: "세트메뉴",
+        categoryImage: ["JAPANESE_ICON", "JAPANESE ICON"],
         items: [
           {
             name: "일반 마라탕+미니꿔바로",
@@ -186,6 +192,7 @@ export const restaurantData = [
       },
       {
         category: "요리류",
+        categoryImage: ["JAPANESE_ICON"],
         items: [
           {
             name: "마파두부",

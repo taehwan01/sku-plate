@@ -1,6 +1,5 @@
 .container {
-  width: 333px;
-  height: 386px;
+  width: 85vw;
   margin-top: 25px;
   border-radius: 31px;
   background-color: rgba(217, 217, 217, 0.5);
@@ -11,8 +10,7 @@
 }
 
 .modalBox {
-  width: 333px;
-  height: 386px;
+  width: 85vw;
   background-color: white;
   border-radius: 31px;
   box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
