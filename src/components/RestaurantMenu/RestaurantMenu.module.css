@@ -1,0 +1,42 @@
+.container {
+  padding: 20px 0 30px 0;
+  margin-bottom: 15px;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+    width: 371px;
+    margin-top: 20px;
+}
+.name {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+.tags {
+  font-size: 10px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menus {
+  width: 371px;
+  display: flex;
+  flex-direction: column;
+}
+.category {
+  margin: 30px 0 10px 0;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+.menu {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}

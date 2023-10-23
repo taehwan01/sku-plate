@@ -1,0 +1,72 @@
+.container {
+  width: 85vw;
+  margin-top: 25px;
+  border-radius: 31px;
+  background-color: rgba(217, 217, 217, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalBox {
+  width: 85vw;
+  background-color: white;
+  border-radius: 31px;
+  box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
+}
+
+.modalContents {
+  position: relative;
+  padding: 0 16px 18px 16px;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.ratingInquiry {
+  width: 100%;
+  height: 31px;
+  margin: 23px 0;
+  border: 1px solid #92979E;
+  border-radius: 19px;
+  font-size: 12px;
+  line-height: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userInquiry {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  resize: none;
+  box-sizing: border-box;
+  border: 1px solid #817a7a;
+  border-radius: 19px;
+  font-size: 12px;
+  line-height: 1rem;
+}
+
+.bottomBar {
+  margin-top: 26px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uploadButton {
+  left: calc(85vw - 148px - 32px);
+  width: 148px;
+  height: 53px;
+  font-size: 20px;
+  letter-spacing: 0.2rem;
+  background-color: #dae591;
+  border: 2px solid #726c6c;
+  border-radius: 43.5px;
+  box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
+}

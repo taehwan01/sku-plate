@@ -1,0 +1,106 @@
+.kakaoMap {
+  margin: 14px 0 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabContainer {
+  height: 46px;
+  width: calc(100% - 120px);
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.tabCategory {
+  height: 94%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectedTab {
+  width: 80px;
+  height: 3px;
+}
+
+.information {
+  width: 100%;
+  margin: 9px 0 15px 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  padding: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  width: 22rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  padding: 11px 9px;
+}
+
+.name {
+  margin: 5px;
+  font-size: 25px;
+}
+.tags {
+  padding: 5px;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+div.ratings {
+  height: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ratingsIcon {
+  margin-right: 7px;
+  color: #f9ef14;
+}
+.ratingsScore {
+  padding-top: 2px;
+  width: 36px;
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+}
+.bookmarkIcon {
+  margin-right: 7px;
+}
+
+.call {
+  width: 22rem;
+  height: 39px;
+  border: solid 1px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.callingIcon {
+  margin-right: 5px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
