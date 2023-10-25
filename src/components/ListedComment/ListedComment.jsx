@@ -70,7 +70,7 @@ function ListedComment({ comment }) {
             <div>{stars}</div>
           </div>
         </div>
-        <span style={{fontSize: "15px"}}>{text}</span>
+        <span style={{fontSize: "13px"}}>{text}</span>
       </div>
       <div style={{ display: "flex", justifyContent: "space-around"}}>
       <span className={styles.date}>{koreaTime}</span>
