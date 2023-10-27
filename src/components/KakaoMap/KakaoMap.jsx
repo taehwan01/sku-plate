@@ -25,23 +25,18 @@ function KakaoMap(restaurantaddress) {
           position: coords,
         });
 
-        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+        // 지도 위치 이동
         map.setCenter(coords);
       }
     });
-    // const markerPosition  = new kakao.maps.LatLng(lat, lon);
-    // var marker = new kakao.maps.Marker({
-    //   position: markerPosition
-    // });
-    // marker.setMap(map);
   }, []);
 
   return (
     <div className={styles.container}>
       <div className={styles.address}>
-        <span style={{marginLeft: "5px"}}>{address}</span>
+        <span style={{ marginLeft: "10px" }}>{address}</span>
       </div>
-      <div id="map" style={{ width: "401px", height: "179px" }}></div>
+      <div id="map" style={{ height: "179px" }}></div>
     </div>
   );
 }
