@@ -15,7 +15,7 @@ function MyPage() {
   const imageFilePath = require(`../../assets/images/${userData.profileImage}.png`);
 
   const handleLogout = async () => {
-    const response = await axios.get(`${process.env.REACT_APP_SERVER_API_URL}8080/users/kakao/logout`, {
+    const response = await axios.get(`${process.env.REACT_APP_SERVER_API_URL}/users/kakao/logout`, {
       headers: {
         Authorization: localStorage.getItem('token'), // 카카오 로그인 후 받은 액세스 토큰을 사용해야 합니다
       },

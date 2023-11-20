@@ -11,7 +11,7 @@ function KakaoOauth() {
       const params = new URL(window.location.href).searchParams;
       const code = params.get('code');
 
-      const response = await axios.post(`${process.env.REACT_APP_SERVER_API_URL}:8080/users/kakao/login`, { code });
+      const response = await axios.post(`${process.env.REACT_APP_SERVER_API_URL}/users/kakao/login`, { code });
 
       console.log(response.data);
 
