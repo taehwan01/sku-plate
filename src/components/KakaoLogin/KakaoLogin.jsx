@@ -1,12 +1,11 @@
-import { REST_API_KEY, REDIRECT_URI } from "../../data/oauth"
-import KakaoIcon from "../../assets/images/icons/KAKAO_ICON.png";
+import KakaoIcon from '../../assets/images/icons/KAKAO_ICON.png';
 
-import styles from "./KakaoLogin.module.css";
+import styles from './KakaoLogin.module.css';
 
 function KakaoLogin() {
   //인가코드
-  let code = new URL(window.location.href).searchParams.get("code");
-  const link = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+  let code = new URL(window.location.href).searchParams.get('code');
+  const link = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_REST_API_KEY}&redirect_uri=${process.env.REACT_APP_SERVER_API_URL}&response_type=code`;
 
   // useEffect((code) => {
   //     axios.post(`http://skuplate.com.${code}`).then((res) => {
@@ -15,14 +14,14 @@ function KakaoLogin() {
   //     });
   //   }, []);
 
-  localStorage.setItem("code", code);
+  localStorage.setItem('code', code);
   const loginHandler = () => {
     window.location.href = link;
   };
-  
+
   return (
-    <div className={styles.loginBox} style={{ backgroundColor: "#FFE812" }} onClick={loginHandler}>
-      <img src={KakaoIcon} alt="kakao icon" className={styles.Icon} />
+    <div className={styles.loginBox} style={{ backgroundColor: '#FFE812' }} onClick={loginHandler}>
+      <img src={KakaoIcon} alt='kakao icon' className={styles.Icon} />
       <span className={styles.text}>카카오톡으로 시작하기</span>
     </div>
   );

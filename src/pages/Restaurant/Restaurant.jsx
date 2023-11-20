@@ -1,44 +1,64 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { restaurantData } from "../../data/restaurantData";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { restaurantData } from '../../data/restaurantData';
 
-import KakaoMap from "../../components/KakaoMap/KakaoMap";
-import RestaurantInfo from "../../components/RestaurantInfo/RestaurantInfo";
-import RestaurantMenu from "../../components/RestaurantMenu/RestaurantMenu";
-import Information from "./Information";
-import Comment from "./Comment";
+import KakaoMap from '../../components/KakaoMap/KakaoMap';
+import RestaurantInfo from '../../components/RestaurantInfo/RestaurantInfo';
+import RestaurantMenu from '../../components/RestaurantMenu/RestaurantMenu';
+import Information from './Information';
+import Comment from './Comment';
 
-import styles from "./Restaurant.module.css";
+import styles from './Restaurant.module.css';
 
 function Restaurant() {
   const { restaurantParam } = useParams();
   const [tab, setTab] = useState(0);
+  const [restaurant, setRestaurant] = useState(null);
 
-  const restaurantId = Number(restaurantParam);
-  const restaurant = restaurantData.find(restaurant => restaurant.id === restaurantId);
-  
-  const TabContent = ({tab}) => {
+  const restaurantId = restaurantParam;
+  const fetchRestaurantData = async (restaurantId) => {
+    try {
+      const result = await axios.get(`${process.env.REACT_APP_SERVER_API_URL}/restaurants/${restaurantId}`, {
+        withCredentials: true,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      setRestaurant(result.data.restaurant);
+    } catch (error) {
+      console.error('Error fetching restaurant data:', error);
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    fetchRestaurantData(restaurantId);
+  }, [restaurantId]);
+
+  const TabContent = ({ tab }) => {
     if (tab === 0) {
-      return <RestaurantMenu restaurantData={restaurant}/>;
-    } 
-    if (tab === 1) {
-      return <RestaurantInfo restaurantData={restaurant}/>;
+      return <RestaurantMenu restaurantData={restaurant} />;
     }
-    if (tab === 2) {
-      return <Comment restaurantData={restaurantId}/>;
-    }
-  }
-  
+    // if (tab === 1) {
+    //   return <RestaurantInfo restaurantData={restaurant} />;
+    // }
+    // if (tab === 2) {
+    //   return <Comment restaurantData={restaurantId} />;
+    // }
+  };
+
   return (
     <div>
-      <section aria-label="place-info" className={styles.information}>
-        <Information restaurantData={restaurant}/>
+      <section aria-label='place-info' className={styles.information}>
+        {/* <Information restaurantData={restaurant} /> */}
       </section>
-      <section aria-label="kakaoMap" className={styles.kakaoMap}>
-        <KakaoMap restaurantData={restaurant.address}/>
+      <section aria-label='kakaoMap' className={styles.kakaoMap}>
+        <KakaoMap />
       </section>
       <hr />
-      <section aria-label="tab" className={styles.tabContainer}>
+      <section aria-label='tab' className={styles.tabContainer}>
         <div
           onClick={() => {
             setTab(0);
@@ -48,11 +68,9 @@ function Restaurant() {
           <div
             className={styles.selectedTab}
             style={{
-              backgroundColor: `${tab === 0 ? "#e05757" : "transparent"}`,
+              backgroundColor: `${tab === 0 ? '#e05757' : 'transparent'}`,
             }}
-          >
-            {/* selected category tagline */}
-          </div>
+          ></div>
         </div>
         <div
           onClick={() => {
@@ -63,11 +81,9 @@ function Restaurant() {
           <div
             className={styles.selectedTab}
             style={{
-              backgroundColor: `${tab === 1 ? "#e05757" : "transparent"}`,
+              backgroundColor: `${tab === 1 ? '#e05757' : 'transparent'}`,
             }}
-          >
-            {/* selected category tagline */}
-          </div>
+          ></div>
         </div>
         <div
           onClick={() => {
@@ -78,17 +94,13 @@ function Restaurant() {
           <div
             className={styles.selectedTab}
             style={{
-              backgroundColor: `${tab === 2 ? "#e05757" : "transparent"}`,
+              backgroundColor: `${tab === 2 ? '#e05757' : 'transparent'}`,
             }}
-          >
-            {/* selected category tagline */}
-          </div>
+          ></div>
         </div>
       </section>
       <hr />
-      <section aria-label="detail Information">
-        <TabContent tab={tab}/>
-      </section>
+      <section aria-label='detail Information'>{/* <TabContent tab={tab} /> */}</section>
     </div>
   );
 }
