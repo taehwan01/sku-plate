@@ -1,34 +1,35 @@
 .container {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .information {
-    margin: 25px;
-    display: flex;
-    flex-direction: column;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
 }
 .text {
-    margin: 15px 0 0 40px;
+  margin: 15px 0 0 40px;
 }
 
 .detail {
-    margin-top: 11px;
-    display: flex;
-    flex-direction: row;
+  margin-top: 11px;
+  display: flex;
+  flex-direction: row;
 }
 .infoIcon {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 .facilityIcon {
-    margin: 10px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .facility {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
 }

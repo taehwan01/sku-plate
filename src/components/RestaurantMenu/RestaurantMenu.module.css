@@ -28,24 +28,35 @@
   width: 143px;
   height: 33px;
   border-radius: 13px;
-  background-color: #DAE591;
+  background-color: #dae591;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .categoryImage {
+  height: 100%;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.categoryImage > img {
+  /* height: 100%; */
+  object-fit: cover;
+  border-radius: 13px;
+  width: 85px;
+  height: 85px;
+  margin: 15px 0;
 }
 
 .categoryHr {
   width: 100%;
   transform: translateY(-100%);
   height: 10px;
-  background-color: #DAE591;
+  background-color: #dae591;
 }
 .menus {
   height: 100%;
-  margin : 5px 0 30px 0;
+  margin: 5px 0 30px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;

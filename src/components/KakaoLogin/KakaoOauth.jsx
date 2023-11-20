@@ -1,21 +1,26 @@
-import { axios } from "axios";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function KakaoOauth() {
   const navigate = useNavigate();
+  const [accessToken, setAccessToken] = useState('');
 
-  //인가코드
-  let code = new URL(window.location.href).searchParams.get("code");
+  useEffect(() => {
+    async function getAccessToken() {
+      const params = new URL(window.location.href).searchParams;
+      const code = params.get('code');
 
-  // useEffect((code) => {
-  //     axios.post(`http://skuplate.com.${code}`).then((res) => {
-  //       console.log(res.data);
-  //       navigate('/loginSuccess');
-  //     });
-  //   }, []);
+      const response = await axios.post('http://localhost:8080/users/kakao/login', { code });
 
-  localStorage.setItem("code", code);
+      console.log(response.data);
+
+      localStorage.setItem('token', response.data.accessToken);
+      localStorage.setItem('user', response.data.user);
+      navigate('/');
+    }
+    getAccessToken();
+  }, []);
 
   return <div></div>;
 }

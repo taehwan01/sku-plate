@@ -6,20 +6,29 @@ import homeIcon from '../../assets/images/icons/HOME_ICON.png';
 import inquiriesIcon from '../../assets/images/icons/INQUIRIES_ICON.png';
 import myPageIcon from '../../assets/images/icons/MY_ICON.png';
 import InquiryModal from '../InquiryModal/InquiryModal';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Footer() {
   const navigate = useNavigate();
 
   const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
+  const [accessToken, setAccessToken] = useState('');
 
   const openInquiryModal = () => {
+    if (!accessToken) {
+      navigate('/login');
+      return;
+    }
     setIsInquiryModalOpen(true);
   };
 
   const closeInquiryModal = () => {
     setIsInquiryModalOpen(false);
   };
+
+  useEffect(() => {
+    setAccessToken(localStorage.getItem('token'));
+  }, [accessToken]);
 
   return (
     <div className={styles.footer}>
@@ -38,7 +47,16 @@ function Footer() {
         <span className={`material-symbols-outlined ${styles.menuIcons}`}>edit_note</span>
         <span className={styles.menuLabels}>문의</span>
       </div>
-      <div className={styles.icon} onClick={() => navigate('/my-page/comments')}>
+      <div
+        className={styles.icon}
+        onClick={() => {
+          if (!accessToken) {
+            navigate('/login');
+            return;
+          }
+          navigate('/my-page/favorites');
+        }}
+      >
         {/* <img className={styles.menuIcons} src={myPageIcon} alt='만든이' /> */}
         <span className={`material-symbols-outlined ${styles.menuIcons}`} style={{ fontWeight: 'normal' }}>
           sentiment_satisfied

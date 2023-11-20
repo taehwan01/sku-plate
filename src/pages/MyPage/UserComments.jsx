@@ -11,7 +11,8 @@ function UserComments() {
       aria-label='user comments'
       style={{ width: 'calc(100% - 40px)', minHeight: 'calc(49vh - 46px)', padding: '0 20px' }}
     >
-      {userComments.length > 0 ? (
+      개발 중...
+      {/* {userComments.length > 0 ? (
         <>
           <div style={{ padding: '8px 0 18px', fontSize: '10px' }}>{userComments.length}개의 댓글이 있습니다.</div>
           {userComments.map((comment, index) => {
@@ -38,13 +39,10 @@ function UserComments() {
             return (
               <div key={comment.id} className={styles.comment}>
                 <span className={styles.commentText}>{commentTextWithLineBreaks}</span>
-                {/* <span className={styles.commentText}>{comment.text}</span> */}
                 <span className={styles.commentDate}>{koreaTime}</span>
                 <span className={styles.commentRestaurant}>{comment.restaurant}</span>
                 {index !== userComments.length - 1 && (
                   <hr style={{ width: '100%', height: '1px', margin: '0 auto 18px' }} />
-
-                  // <hr style={{ width: 'calc(100% - 32px)', height: '1px', marginBottom: '18px' }} />
                 )}
               </div>
             );
@@ -52,7 +50,7 @@ function UserComments() {
         </>
       ) : (
         <div>작성 댓글이 없습니다.</div>
-      )}
+      )} */}
     </section>
   );
 }

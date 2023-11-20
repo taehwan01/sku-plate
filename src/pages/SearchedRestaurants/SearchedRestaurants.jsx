@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import styles from './Restaurants.module.css';
+import styles from './SearchedRestaurants.module.css';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import { categories } from '../../data/categories';
 import ClassifiedRestaurants from '../../components/ClassifiedRestaurants/ClassifiedRestaurants';
@@ -9,28 +9,23 @@ import ClassifiedRestaurants from '../../components/ClassifiedRestaurants/Classi
 import { restaurants } from '../../data/dummyData';
 import axios from 'axios';
 
-function Restaurants() {
-  const { categoryParam } = useParams();
+function SearchedRestaurants() {
+  const { searchParam } = useParams();
   const navigate = useNavigate();
   const [restaurants, setRestaurants] = useState([]);
 
-  const getRestaurants = async (typeOfFood) => {
-    const result = await axios.get(
-      `${process.env.REACT_APP_SERVER_API_URL}/restaurants/${typeOfFood === 'all' ? '' : `type/${typeOfFood}`}`,
-      {
-        withCredentials: true,
-        headers: {
-          'Content-Type': 'application/json',
-        },
+  const getResult = async () => {
+    const result = await axios.get(`${process.env.REACT_APP_SERVER_API_URL}/restaurants/search/${searchParam}`, {
+      withCredentials: true,
+      headers: {
+        'Content-Type': 'application/json',
       },
-    );
-    // console.log(result.data.restaurants);
-    setRestaurants(result.data.restaurants);
+    });
+    setRestaurants(result.data.result);
   };
-
   useEffect(() => {
-    getRestaurants(categoryParam);
-  }, [categoryParam]);
+    getResult();
+  }, []);
 
   return (
     <div>
@@ -39,7 +34,7 @@ function Restaurants() {
           <SearchBox />
         </section>
         <hr />
-        <section className={styles.categories}>
+        {/* <section className={styles.categories}>
           {categories.map((category) => (
             <div
               key={category.id}
@@ -53,12 +48,15 @@ function Restaurants() {
               ></div>
             </div>
           ))}
-        </section>
+        </section> */}
         <hr />
       </section>
-      <ClassifiedRestaurants listedRestaurants={restaurants} />
+      <ClassifiedRestaurants
+        listedRestaurants={restaurants}
+        // currentCategoryRestaurants={restaurants[categoryParam]}
+      />
     </div>
   );
 }
 
-export default Restaurants;
+export default SearchedRestaurants;

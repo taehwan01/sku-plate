@@ -4,6 +4,7 @@ import { Fragment, useEffect, useState } from 'react';
 import UserComments from './UserComments';
 import { useNavigate, useParams } from 'react-router-dom';
 import Favorites from './Favorites';
+import axios from 'axios';
 
 function MyPage() {
   const { myContents } = useParams();
@@ -12,6 +13,23 @@ function MyPage() {
   const [showComment, setShowComment] = useState(myContents === 'comments');
 
   const imageFilePath = require(`../../assets/images/${userData.profileImage}.png`);
+
+  const handleLogout = async () => {
+    const response = await axios.get('http://localhost:8080/users/kakao/logout', {
+      headers: {
+        Authorization: localStorage.getItem('token'), // 카카오 로그인 후 받은 액세스 토큰을 사용해야 합니다
+      },
+    });
+    localStorage.removeItem('token');
+    console.log(response.data);
+    navigate('/');
+  };
+
+  useEffect(() => {
+    if (!localStorage.getItem('token')) {
+      navigate('/login');
+    }
+  }, []);
 
   return (
     <div className={styles.myPage}>
@@ -55,6 +73,9 @@ function MyPage() {
         </div>
         <hr style={{ width: 'calc(100% - 40px)', height: '1px', margin: '0 auto' }} />
         {showComment ? <UserComments /> : <Favorites />}
+      </div>
+      <div style={{ display: 'flex', width: '100%', justifyContent: 'center', marginTop: '20px' }}>
+        <button onClick={handleLogout}>LOGOUT</button>
       </div>
     </div>
   );
